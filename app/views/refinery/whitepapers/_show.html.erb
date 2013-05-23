@@ -1,0 +1,5 @@
+<% if @page.whitepaper.present? %>
+  <div id="whitepaper">
+    <%= link_to t('.download'), @page.whitepaper.url, class: 'btn whitepaper-download' -%>
+  </div>
+<% end -%>

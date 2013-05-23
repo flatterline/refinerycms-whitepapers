@@ -1,0 +1,21 @@
+prepare_whitepaper_select = function() {
+  $('#whitepaper-page .chzn-select-deselect').chosen({
+    no_results_text:       "<%=  I18n.t('chosen.no_results') %>",
+    allow_single_deselect: true
+  });
+}
+
+whitepaper_success = function(html) {
+  close_dialog();
+
+  var flash_container = $(html).find('#whitepaper_flash_container').remove();
+
+  $('#whitepaper_wym_editation').html($(html).find('#whitepaper-page'));
+  $('#flash_container').append($(flash_container).html())
+  init_flash_messages();
+  prepare_whitepaper_select();
+}
+
+$(function() {
+  prepare_whitepaper_select();
+});

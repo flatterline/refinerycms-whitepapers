@@ -1,0 +1,19 @@
+<div>
+  <% if @dialog_successful -%>
+    <div id="whitepaper_flash_container">
+      <%= render '/refinery/message' %>
+      <% flash.clear -%>
+    </div>
+  <% end -%>
+
+  <div id="whitepaper-page">
+    <%= fields_for 'page[whitepaper_page]', @whitepaper_page || Refinery::WhitepaperPage.new do |whitepaper_page_form| %>
+      <%= whitepaper_page_form.label :resource_id, t('.join_page_with_resource')  %>
+      <%= whitepaper_page_form.collection_select(:resource_id, Refinery::Resource.all, :id, :title, { include_blank: true }, { data: { placeholder: t('.choose_file') }, multiple: false, class: 'chzn-select-deselect', style: 'min-width: 300px;' }) -%>
+    <% end %>
+
+    <span class="or">or</span>
+
+    <%= link_to 'Upload new whitepaper', refinery.new_admin_whitepaper_path(dialog: true), class: 'button' -%>
+  </div>
+</div>

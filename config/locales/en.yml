@@ -1,0 +1,25 @@
+en:
+  chosen:
+    no_results: "No results matched"
+  refinery:
+    admin:
+      pages:
+        tabs:
+          whitepaper_form:
+            join_page_with_resource: "Select a whitepaper to feature on this page:"
+            choose_file: "Click to choose file"
+            flash:
+              connection_destroyed: "Connection between whitepaper and page was successfully deleted."
+    whitepapers:
+      show:
+        download: Download Whitepaper
+    plugins:
+      refinerycms_whitepapers:
+        description: Allows attaching whitepapers to a page.
+        tab_name: Whitepaper
+        title: Whitepapers
+  activerecord:
+    attributes:
+      'refinery/whitepapers/whitepaper':
+        page: Page
+        resource: Resource

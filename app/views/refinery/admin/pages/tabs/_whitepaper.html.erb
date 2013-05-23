@@ -1,0 +1,8 @@
+<div class="wym_skin_refinery page_part">
+  <%= render '/refinery/admin/pages/tabs/whitepaper_pages_bar' -%>
+
+  <div id="whitepaper_wym_editation" class="wym_box field" style="height: 300px;">
+    <% @whitepaper_page = @page.whitepaper_page || @page.build_whitepaper_page -%>
+    <%= render '/refinery/admin/pages/tabs/whitepaper_form' -%>
+  </div>
+</div>
