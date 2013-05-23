@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.require_paths     = %w(lib)
   s.summary           = 'Whitepapers extension for Refinery CMS'
-  s.version           = '1.0'
+  s.version           = '0.1.0'
 
   s.files             = `git ls-files`.split("\n")
   s.test_files        = `git ls-files -- spec/*`.split("\n")
